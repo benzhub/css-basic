@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>div和span, class和id</title>
+    <style>
+      .card {
+        border: 1px solid #ccc;
+        background: #f4f4f4;
+        padding: 20px;
+        margin-bottom: 10px;
+      }
+      .enhance {
+        color: yellow;
+        background-color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- id是唯一值 -->
+    <div id="main-header" class="card">
+      <h1>我的blog</h1>
+      <p>歡迎來到我的blog</p>
+    </div>
+    <ul id="main-nav">
+      <li><a href="#">主頁</a></li>
+      <li><a href="#">關於我們</a></li>
+      <li><a href="#">聯繫我們</a></li>
+    </ul>
+    <div id="about" class="card">
+      <h3>關於我們</h3>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque,
+        consequatur, illum maxime molestiae labore in necessitatibus qui,
+        voluptas placeat officia
+        <!-- span 不是塊級元素因此常常搭配p 標籤使用(不會影響到整塊或是強制換行) -->
+        <span class="enhance"
+          >dolorem sequi praesentium? Officiis consectetur</span
+        >
+        veniam doloremque excepturi repellat ducimus.
+      </p>
+    </div>
+    <div id="contact" class="card">
+      <h3>聯繫我們</h3>
+      <ul>
+        <li>地址:台北市中正南路一段55號</li>
+        <li>電話:02-1234567</li>
+        <li>email:test@test.com</li>
+      </ul>
+    </div>
+    <div id="main-footer">
+      <p>Copyright &copy; 2021</p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KeyFrame 01</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #333;
+      padding: 10px;
+    }
+
+    .box {
+      background: white;
+      width: 200px;
+      height: 25vh;
+      position: relative;
+      /* 命名動畫賦值 */
+      animation-name: animate1;
+      /* 動畫執行1次所需時間 */
+      animation-duration: 5s;
+      /* 動畫執行次數(infinite:無限次) */
+      animation-iteration-count: infinite;
+      /* 動畫執行完成後，狀態是否保留(保留在to的設定) */
+      animation-fill-mode: forwards;
+      /* 網頁載入後，動畫延遲幾秒執行 */
+      animation-delay: 2s;
+
+      /* animation-direction 下一個撥放週期設定 */
+      /* 奇數次正向撥放，偶數次反向撥放 */
+      animation-direction: alternate;
+      /* 反向撥放，從600px 到 200px撥放 */
+      animation-direction: reverse;
+      /* 奇數次反向撥放，偶數次正向撥放 */
+      animation-direction: alternate-reverse;
+
+      /* 先慢後快再慢 */
+      animation-timing-function: ease;
+      /* 緩慢開始 */
+      animation-timing-function: ease-in;
+      /* 緩慢結束 */
+      animation-timing-function: ease-out;
+      /* 緩慢開始，緩慢結束 */
+      animation-timing-function: ease-in-out;
+      /* 動畫多重屬性 */
+      /* animation: animate1 2s infinite forwards alternate-reverse ease-in-out; */
+      animation: animate1 10s infinite forwards ease-in-out;
+    }
+
+    /* @keyframes animate1 {
+      from {
+        width: 200px;
+        top: 0;
+        height: 200px
+      }
+
+      to {
+        width: 600px;
+        top: 0;
+        background: orange;
+        height: 50vh;
+      }
+    } */
+    @keyframes animate1 {
+      25% {
+        top: 0;
+        left: 300px;
+        background: red;
+        border-radius: 0 50% 0 0;
+      }
+
+      50% {
+        top: 300px;
+        left: 300px;
+        background: blue;
+        border-radius: 0 0 50% 0;
+      }
+
+      75% {
+        top: 300px;
+        left: 0;
+        background: green;
+        border-radius: 0 0 0 50%;
+      }
+
+      100% {
+        top: 0;
+        left: 0;
+        background: yellow;
+        border-radius: 50% 0 0 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">Box</div>
+</body>
+
+</html>

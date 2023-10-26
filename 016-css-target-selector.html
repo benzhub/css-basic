@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Targeted Selectors</title>
+  <style>
+    /* direct child */
+    /* div>p(只有一層)， div p(嵌套以下所有) */
+    div>p {
+      background: orange;
+    }
+
+    /* div同一層的下一個p標籤兄弟元素(只有一個) */
+    div+p {
+      background: blue;
+      color: #fff;
+    }
+
+    /* by attribute */
+    /* a[target] {
+        background: #ff0000;
+        color: #fff;
+      } */
+    a[target="_blank"] {
+      background: #ff0000;
+      color: #fff;
+    }
+
+    /* specific attribute values */
+    input[type="text"],
+    input[type="email"] {
+      width: 100%;
+      margin-bottom: 5px;
+      background-color: gray;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <p>div > p: Lorem ipsum dolor sit amet.</p>
+    <ul>
+      <li>Item 1</li>
+      <li>
+        <p>Item</p>
+      </li>
+      <li>Item 3</li>
+    </ul>
+    <p>div > p: Lorem ipsum dolor sit amet.</p>
+  </div>
+  <p>Lorem ipsum dolor sit amet.</p>
+  <br />
+  <a href="#">第一頁</a>
+  <a href="#" target="_blank">第二頁</a>
+  <a href="http://google.com" target="_blank">谷歌</a>
+
+  <form>
+    <input type="text" placeholder="姓名" />
+    <input type="email" placeholder="email" />
+    <input type="submit" placeholder="提交" />
+  </form>
+</body>
+
+</html>

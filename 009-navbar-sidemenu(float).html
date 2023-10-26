@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS菜單欄和導航</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      /* 導航樣式 */
+      .navbar {
+        /* 清除li小圓點 */
+        list-style: none;
+        /* 清除ul tag默認自帶的邊距 */
+        margin: 0;
+        padding: 0;
+        background: #4c6ca0;
+        border-radius: 5px;
+        /* 在子元素如果要設定float的話，要設定overflow: auto，子元素才不會把父元素的樣式清除掉 */
+        overflow: auto;
+      }
+
+      .navbar li {
+        float: left;
+      }
+
+      .navbar li a {
+        display: block; /* 將a tag設定為block box ， 讓padding 上下的邊距可以生效 */
+        color: #fff;
+        text-decoration: none;
+        padding: 15px 20px; /* 因為a tag是inline box 所以第一個上下15px並不會生效 */
+      }
+
+      .navbar li a:hover {
+        background-color: #446190;
+        color: #f4f4f4;
+      }
+
+      /* 側邊菜單欄 */
+      .side-menu {
+        list-style: none;
+        border: 1px #ddd solid;
+        border-radius: 10px;
+        width: 300px;
+        padding: 20px;
+      }
+
+      .side-menu li {
+        font-size: 18px;
+        line-height: 2.4em;
+        border-bottom: 1px #ddd dotted;
+      }
+
+      /* 設定最後一個子元素不要有底線 */
+      .side-menu li:last-child {
+        border: none;
+      }
+
+      .side-menu li a {
+        color: #333;
+        text-decoration: none;
+      }
+
+      .side-menu li a:hover {
+        color: coral;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="navbar">
+      <li><a href="#">主頁</a></li>
+      <li><a href="#">關於我們</a></li>
+      <li><a href="#">聯繫我們</a></li>
+      <li><a href="#">服務</a></li>
+    </ul>
+    <ul class="side-menu">
+      <li><a href="#">主頁</a></li>
+      <li><a href="#">關於我們</a></li>
+      <li><a href="#">聯繫我們</a></li>
+      <li><a href="#">服務</a></li>
+    </ul>
+  </body>
+</html>

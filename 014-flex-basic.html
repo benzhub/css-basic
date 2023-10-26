@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex Basics</title>
+    <style>
+      #container{
+        display: flex;
+        /* default setting is row */
+        /* 左對齊 */
+        flex-direction: row;
+        /* 右對齊 */
+        /* flex-direction: row-reverse; */
+        /* flex-direction: column; */
+        /* 自動換行 */
+        /* flex-wrap: wrap; */
+        /* 不換行 */
+        /* flex-wrap: nowrap; */
+        /* flex 縮寫 */
+        flex-flow: row wrap;
+      }
+      .item{
+        padding: 1rem;
+        text-align: center;
+        background-color: #f4f4f4;
+        border: #ccc solid 1px;
+        margin: 0.75rem;
+        /* 所有item自動佔滿 */
+        flex:1;
+      }
+      .item:first-child {
+        /* flex:2就是變成flex:1的2倍 */
+        /* flex:2; */
+        flex:1;
+      }
+    </style>
+  </head>
+  <body>
+      <div id="container">
+          <div class="item">
+              <h3>Item 1<h3>
+          </div>
+          <div class="item">
+              <h3>Item 2<h3>
+          </div>
+          <div class="item">
+              <h3>Item 3<h3>
+          </div>
+          <div class="item">
+              <h3>Item 4<h3>
+          </div>
+          <div class="item">
+              <h3>Item 5<h3>
+          </div>
+          <div class="item">
+              <h3>Item 6<h3>
+          </div>
+          <div class="item">
+              <h3>Item 1<h3>
+          </div>
+          <div class="item">
+              <h3>Item 2<h3>
+          </div>
+          <div class="item">
+              <h3>Item 3<h3>
+          </div>
+          <div class="item">
+              <h3>Item 4<h3>
+          </div>
+          <div class="item">
+              <h3>Item 5<h3>
+          </div>
+          <div class="item">
+              <h3>Item 6<h3>
+          </div>
+          
+      </div>
+  </body>
+</html>

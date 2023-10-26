@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>表單和輸入框</title>
+  </head>
+  <body>
+    <form action="process.php">
+      <!-- 文本 -->
+      <div>
+        <label for="name">姓名</label>
+        <input type="text" id="name" name="name" value="summer" />
+      </div>
+      <br />
+      <!-- 郵箱 -->
+      <!-- placeholder 提示訊息 -->
+      <div>
+        <label for="email">郵箱</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="請輸入你的email"
+        />
+      </div>
+      <br />
+      <!-- 密碼 -->
+      <div>
+        <label for="password">密碼</label>
+        <input type="password" id="password" name="password" />
+      </div>
+      <!-- 多行文本 -->
+      <div>
+        <label for="message">消息</label>
+        <br />
+        <!-- cols:列寬 rows:行高 -->
+        <textarea name="message" id="message" cols="50" rows="10"></textarea>
+      </div>
+      <!-- 下拉框 -->
+      <!-- selected 默認被選中 -->
+      <div>
+        <label for="gender">性別</label>
+        <select name="gender" id="gender">
+          <option value="male">男性</option>
+          <option value="female" selected>女性</option>
+        </select>
+      </div>
+
+      <!-- 數字 -->
+      <div>
+        <label for="age">年齡</label>
+        <input type="number" name="number" id="age" />
+      </div>
+
+      <!-- 日期 -->
+      <div>
+        <label for="birthday">生日</label>
+        <input type="date" name="birthday" id="birthday" />
+      </div>
+
+      <!-- 單選框 -->
+      <div>
+        <label for="membership">會員身分</label>
+        <br />
+        <input type="radio" value="simple" name="membership" id="membership" />
+        VIP
+        <br />
+        <input
+          type="radio"
+          value="standard"
+          name="membership"
+          id="membership"
+        />
+        VVIP
+        <br />
+        <input
+          type="radio"
+          value="super"
+          name="membership"
+          id="membership"
+          checked
+        />
+        VVVIP
+      </div>
+
+      <!-- 複選框 -->
+      <div>
+        <label for="hobbies">會員愛好</label>
+        <br />
+        <input type="checkbox" value="sport" name="hobbies" id="hobbies" />
+        運動
+        <br />
+        <input type="checkbox" value="movie" name="hobbies" id="hobbies" />
+        看電影
+        <br />
+        <input
+          type="checkbox"
+          value="read"
+          name="hobbies"
+          id="hobbies"
+          checked
+        />
+        看書
+      </div>
+      <!-- 表單提交 -->
+      <input type="submit" value="提交" />
+      <button type="submit">提交</button>
+      <!-- 標單重置 -->
+      <button type="reset">重置</button>
+    </form>
+  </body>
+</html>

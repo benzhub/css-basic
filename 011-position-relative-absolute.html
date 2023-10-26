@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS定位</title>
+  <style>
+    body {
+      height: 4000px;
+    }
+
+    .box {
+      width: 100px;
+      height: 100px;
+    }
+
+    .container {
+      position: relative;
+      width: 500px;
+      height: 500px;
+      background: #333;
+      /* z-index: 2; */
+    }
+
+    /* relative相對定位:相較於正常位置進行定位, top left right bottom */
+    #box-1 {
+      /* position默認設定 */
+      /* position: static; */
+      /* 沒有position的設定沒有辦法做top left 等的定位 */
+
+      /* 相對定位，相較於自身位置去定位 */
+      position: relative;
+      top: 50px;
+      left: 50px;
+      background: red;
+      /* z-index為CSS圖層的層級優先: 默認是0，數字越大圖層越上面 */
+      z-index: 1;
+    }
+
+    /* absolute:絕對定位(脫離文檔流)，相較於最近的已定位的祖先元素 */
+    #box-2 {
+      position: absolute;
+      top: 100px;
+      left: 100px;
+      background: yellow;
+    }
+
+    #box-3 {
+      position: absolute;
+      bottom: 100px;
+      right: 100px;
+      background: green;
+    }
+
+    /* fixed: 固定定位: 相較於瀏覽器的視窗進行定位 */
+    #box-4 {
+      position: fixed;
+      background: blue;
+      z-index: 2;
+    }
+
+    /* sticky: 黏性定位: 某個元素距離其父元素的距離達到黏性定位的要求的時候，就進行固定定位(static和fixed的結合) */
+    #box-5 {
+      /* position: sticky; */
+      top: 0;
+      background: orange;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div id="box-1" class="box">red</div>
+    <div id="box-2" class="box">yellow</div>
+    <div id="box-3" class="box"></div>
+  </div>
+  <div id="box-4" class="box">blue</div>
+  <div id="box-5" class="box">orange</div>
+</body>
+
+</html>

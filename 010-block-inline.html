@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS內聯和塊元素</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      li {
+        /* 將li塊級元素設定成內聯元素，同時前面默認的小黑點也會不見 */
+        display: inline;
+      }
+
+      li a {
+        padding-right: 20px;
+        text-decoration: none;
+        color: orangered;
+      }
+      li a:hover {
+        color: orange;
+      }
+      .img-test {
+        /* 如果想要讓元素置中，可以將它設定為塊級元素後margin: auto 就會置中 */
+        /* display: block; */
+        max-width: 200px;
+        margin: auto;
+        /* margin-top: 20px; */
+        padding: 20px 20px;
+      }
+      .img-test img {
+        width: 100%;
+      }
+      .box {
+        /* display 不可以與width padding margin 一起使用 ， 如果一起使用將會失去效用*/
+        /* display: inline; */
+        /* 需要使用inline-block */
+        display: inline-block;
+        box-sizing: border-box;
+        width: 32.5%;
+        background: #f4f4f4;
+        padding: 20px; /* inline 在設定padding的時候要記得使用box-sizing: border-box 避免超出預設盒子大小 */
+        margin-bottom: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li><a href="#">HTML</a></li>
+      <li><a href="#">CSS</a></li>
+      <li><a href="#">Javascript</a></li>
+    </ul>
+    <div class="img-test">
+      <img src="https://media.istockphoto.com/id/1168950519/photo/abstract-blurred-leaves-of-tree-in-nature-forest-with-sunny-and-bokeh-light-at-public-park.jpg?s=2048x2048&w=is&k=20&c=VU4nsrvJvBTkFZPtfCXcBGyn4FE9qQG4tqG5pvPABmY=" alt="" />
+    </div>
+    <div class="img-test">
+      <img src="https://media.istockphoto.com/id/1168950519/photo/abstract-blurred-leaves-of-tree-in-nature-forest-with-sunny-and-bokeh-light-at-public-park.jpg?s=2048x2048&w=is&k=20&c=VU4nsrvJvBTkFZPtfCXcBGyn4FE9qQG4tqG5pvPABmY=" alt="" />
+    </div>
+    <div class="img-test">
+      <img src="https://media.istockphoto.com/id/1168950519/photo/abstract-blurred-leaves-of-tree-in-nature-forest-with-sunny-and-bokeh-light-at-public-park.jpg?s=2048x2048&w=is&k=20&c=VU4nsrvJvBTkFZPtfCXcBGyn4FE9qQG4tqG5pvPABmY=" alt="" />
+    </div>
+    <br />
+    <div class="box">
+      <h3>標題1</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit cumque
+        voluptate nulla adipisci dignissimos nihil modi pariatur facere sit,
+        corporis amet, corrupti culpa sequi error quidem sed aperiam ducimus
+        autem?
+      </p>
+    </div>
+    <div class="box">
+      <h3>標題1</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit cumque
+        voluptate nulla adipisci dignissimos nihil modi pariatur facere sit,
+        corporis amet, corrupti culpa sequi error quidem sed aperiam ducimus
+        autem?
+      </p>
+    </div>
+    <div class="box">
+      <h3>標題1</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit cumque
+        voluptate nulla adipisci dignissimos nihil modi pariatur facere sit,
+        corporis amet, corrupti culpa sequi error quidem sed aperiam ducimus
+        autem?
+      </p>
+    </div>
+  </body>
+</html>

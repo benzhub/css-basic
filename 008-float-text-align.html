@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS浮動和對齊</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      /* 清除前面所設定的float */
+      .clr {
+        clear: both;
+      }
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.4em;
+      }
+      /* 居中 */
+      .container {
+        /* 當邊距大於960px時左右會被固定住，但是小於960px時，就會自動調整 */
+        max-width: 960px;
+        /* margin:auto 會將左右兩邊的外邊距自動相等進而達到置中的效果 */
+        margin: auto;
+      }
+      .box {
+        background: #f4f4f4;
+        border: 1px solid #333;
+        padding: 20px;
+        margin-bottom: 15px;
+      }
+
+      /* 文本對齊 */
+      .box p {
+        /* 左對齊默認 */
+        text-align: left;
+        /* 右對齊 */
+        text-align: right;
+        /* 居中 */
+        text-align: center;
+        /* 兩端對齊 */
+        text-align: justify;
+      }
+
+      /* 設置浮動 */
+      /* float在修改時，容易破壞結構(重疊)，所以現在已經比較不常用了 */
+      #box-2 {
+        float: left;
+        width: 68%;
+      }
+      #box-3 {
+        float: right;
+        width: 30%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div id="box-1" class="box">
+        <h3>標題1</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas error
+          minima reprehenderit, recusandae nesciunt numquam veritatis. Vitae
+          suscipit recusandae consectetur.
+        </p>
+      </div>
+      <div id="box-2" class="box">
+        <h3>標題2</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas error
+          minima reprehenderit, recusandae nesciunt numquam veritatis. Vitae
+          suscipit recusandae consectetur.
+        </p>
+      </div>
+      <div id="box-3" class="box">
+        <h3>標題3</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas error
+          minima reprehenderit, recusandae nesciunt numquam veritatis. Vitae
+          suscipit recusandae consectetur.
+        </p>
+      </div>
+      <div class="clr"></div>
+      <div id="box-4" class="box">
+        <h3>標題4</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas error
+          minima reprehenderit, recusandae nesciunt numquam veritatis. Vitae
+          suscipit recusandae consectetur.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

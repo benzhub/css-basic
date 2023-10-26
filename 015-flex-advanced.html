@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flex Align</title>
+  <link rel="stylesheet" href="flex-demo.css">
+  <style>
+    #container {
+      display: flex;
+      background-color: #555;
+      flex-wrap: wrap;
+      /* 水平線對齊操作 */
+      /* 左對齊(default) */
+      /* justify-content: flex-start; */
+      /* 右對齊 */
+      /* justify-content: flex-end; */
+      /* 置中 */
+      justify-content: center;
+      /* 兩側間隔相等，但item間隔的距離比兩側大 */
+      /* justify-content: space-around; */
+      /* 兩側和item之間的距離間隔都相等 */
+      /* justify-content: space-evenly; */
+      /* 兩側間隔最小化，但item間隔的距離相等且最大化 */
+      /* justify-content: space-between; */
+      height: 600px;
+      /* 垂直線對齊操作(注意，一定要設定高度) */
+      /* 上下填滿(default) */
+      /* align-items: stretch; */
+      /* 往上對齊 */
+      /* align-items: flex-start; */
+      /* 與上面效果一樣 */
+      /* align-items: baseline; */
+      /* 中心對齊 */
+      /* align-items: center; */
+      /* 往下對齊 */
+      /* align-items: flex-end; */
+      /* 與上面效果一樣 */
+      /* align-items: last baseline; */
+
+      /* align-content是多軸線的運作，只有一根軸線(單行)就不會起作用 */
+      /* 上下填滿(default) */
+      /* align-content: stretch; */
+      /* 往上對齊 */
+      /* align-content: flex-start; */
+      /* 往下對齊 */
+      /* align-content: flex-end; */
+      /* 居中對齊 */
+      /* align-content: center; */
+      /* 上下兩測間隔相等，但item上下間隔的距離比兩側大 */
+      /* align-content: space-around; */
+      /* 上下兩側和item上下之間的距離間隔都相等 */
+      /* align-content: space-evenly; */
+      /* 上下兩側和item距離最小化，item上下之間的距離間隔最大化且相等 */
+      /* align-content: space-between; */
+    }
+
+    .item {
+      padding: 1rem;
+      text-align: center;
+      background-color: #f4f4f4;
+      border: #ccc solid 1px;
+      margin: 0.75rem;
+      /* width: 300px; */
+      /* 效果跟上面的一樣 */
+      flex-basis: 300px;
+      /* flex: 1; */
+    }
+
+    .item-1 {
+      order: 9;
+    }
+
+    .item-2 {
+      /* item 區塊內的垂直軸線 */
+      /* 向上對齊 */
+      align-self: flex-start;
+      /* 居中對齊 */
+      /* align-self: center; */
+      /* 向下對齊 */
+      /* align-self: flex-end; */
+      order: 1;
+    }
+
+    .item-3 {
+      order: 2
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container">
+    <div class="item item-1">
+      <h3>Item 1</h3>
+    </div>
+    <div class="item item-2">
+      <h3>Item 2</h3>
+    </div>
+    <div class="item item-3">
+      <h3>Item 3</h3>
+    </div>
+    <div class="item item-3">
+      <h3>Item 4</h3>
+    </div>
+    <div class="item item-3">
+      <h3>Item 5</h3>
+    </div>
+    <div class="item item-3">
+      <h3>Item 6</h3>
+    </div>
+    <div class="item item-3">
+      <h3>Item 7</h3>
+    </div>
+    <div class="item item-3">
+      <h3>Item 8</h3>
+    </div>
+    <div class="item item-3">
+      <h3>Item 9</h3>
+    </div>
+  </div>
+</body>
+
+</html>

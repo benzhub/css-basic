@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>基本的CSS選擇器</title>
+    <style>
+      /* 元素選擇器 */
+      body {
+        background-color: #333;
+      }
+
+      /* #是ID選擇器 */
+      #about {
+        background-color: #ffffff;
+      }
+
+      #welcome {
+        background-color: #f4f4f4;
+      }
+      /* .是類選擇器 */
+      .primary-heading {
+        color: green;
+      }
+      /* 多項選擇器 */
+      #welcome,
+      #about {
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin-bottom: 5px;
+      }
+      /* 嵌套選擇器 */
+      #welcome p {
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="welcome">
+      <h2 class="primary-heading">歡迎來到我的blog</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
+        quaerat labore assumenda voluptatem dolorem qui corporis tempora, minus
+        velit praesentium est. Unde fugit at temporibus cupiditate adipisci
+        voluptates enim nesciunt!
+      </p>
+    </div>
+    <div id="about">
+      <h2>關於我們</h2>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni minus
+        nostrum rerum, qui doloremque quam quia optio numquam, vitae, itaque
+        exercitationem quas dolore eius aspernatur quis doloribus voluptatum
+        ducimus perferendis?
+      </p>
+    </div>
+  </body>
+</html>
