@@ -1,87 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CSS Variables</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
   <style>
     :root {
-      --primary-color: steelblue;
-      --secondary-color: skyblue;
-      --light-color: #f4f4f4;
-      --max-width: 1100px;
-      --box-1-width: 1;
-      --box-2-width: 2;
+      --primary: #eee;
+      --seondary: rgb(223, 73, 73);
+      --third: skyblue;
     }
-
     * {
       padding: 0;
       margin: 0;
+      box-sizing: border-box;
     }
-
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.4;
-      background: var(--light-color);
-    }
-
-    header {
-      background-color: var(--primary-color);
-      color: #fff;
-      border-bottom: 5px var(--secondary-color) solid;
-      text-align: center;
-    }
-
-    .container {
+    .conatiner {
+      margin: 2rem;
       display: flex;
-      margin: 0 auto;
-      max-width: var(--max-width);
+      flex-flow: row wrap;
+      justify-content: space-around;
+      gap: 2rem;
     }
-
-    .box {
-      background-color: var(--primary-color);
-      color: #fff;
-      border-bottom: 5px var(--secondary-color) solid;
-      padding: 1rem;
-      margin: 1rem;
+    .item {
+      border: 1px solid black;
+      flex: 1;
+      text-align: center;
+      padding: 2rem;
+      border-radius: 2rem;
     }
-
-    .box-1 {
-      flex: var(--box-1-width);
+    .item:nth-child(1) {
+      background-color: var(--primary);
     }
-
-    .box-2 {
-      flex: var(--box-2-width);
+    .item:nth-child(2) {
+      background-color: var(--seondary);
+    }
+    .item:nth-child(3n) {
+      background-color: var(--third);
     }
   </style>
 </head>
-
 <body>
-  <header>
-    <h1>歡迎來到BenzHub</h1>
-  </header>
-  <div class="container">
-    <div class="box box-1">
-      <h3>標題</h3>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Non quasi
-        beatae culpa laborum sint tenetur, ducimus temporibus provident
-        corporis earum quas nemo ab ut optio, quidem ipsum commodi, repellat
-        labore!
-      </p>
-    </div>
-    <div class="box box-2">
-      <h3>標題</h3>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Non quasi
-        beatae culpa laborum sint tenetur, ducimus temporibus provident
-        corporis earum quas nemo ab ut optio, quidem ipsum commodi, repellat
-        labore!
-      </p>
-    </div>
+  <div class="conatiner">
+    <div class="item">item-1</div>
+    <div class="item">item-2</div>
+    <div class="item">item-3</div>
+    <div class="item">item-4</div>
+    <div class="item">item-5</div>
+    <div class="item">item-6</div>
+    <div class="item">item-7</div>
+    <div class="item">item-8</div>
+    <div class="item">item-9</div>
+    <div class="item">item-10</div>
   </div>
 </body>
-
 </html>

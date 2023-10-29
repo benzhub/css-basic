@@ -1,78 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>nth child</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
   <style>
-    li {
-      padding: 0.25rem;
-      margin: 0.25rem;
-      list-style: none;
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
     }
-
-    /* first-child */
-    li:first-child {
-      background: red;
+    .container {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-around;
     }
-
-    li:last-child {
-      background: yellow;
+    .item {
+      border: 1px solid #333;
+      padding: 2rem;
+      border-radius: 1rem;
+      margin: 2rem;
     }
-
-    /* 選擇第三個li */
-    li:nth-child(3) {
-      /* 如果紫色不想被下面綠色覆蓋，可以使用!important避免被覆蓋 */
-      background: purple !important;
+    .item:first-child {
+      background-color: orange;
     }
-
-    /* 每隔三個的倍數都設定背景為綠色 */
-    li:nth-child(3n) {
-      background: green;
+    .item:last-child {
+      background-color: purple;
     }
-
-    /*  第七個之後，才開始計算，每隔三個的倍數都設定背景為灰色 */
-    /* li:nth-child(3n + 7) {
-      background: gray;
-    } */
-
-    /* 奇數 */
-    /* li:nth-child(odd) {
-      background: skyblue;
-    } */
-
-    /* 偶數 */
-    /* li:nth-child(even) {
-      background: lightgreen;
-    } */
+    .item:nth-child(2) {
+      background-color: green;
+    }
+    .item:nth-child(4n){
+      background-color: rgb(69, 223, 223);
+    }
+    .item:nth-child(3n+3) {
+      background-color: brown;
+    }
+    .item:nth-child(odd){
+      background-color: skyblue;
+    }
+    .item:nth-child(even){
+      background-color: lightgreen;
+    }
   </style>
 </head>
-
 <body>
-  <ul>
-    <li>Item 1</li>
-    <li>Item 2</li>
-    <li>Item 3</li>
-    <li>Item 4</li>
-    <li>Item 5</li>
-    <li>Item 6</li>
-    <li>Item 7</li>
-    <li>Item 8</li>
-    <li>Item 9</li>
-    <li>Item 10</li>
-    <li>Item 11</li>
-    <li>Item 12</li>
-    <li>Item 13</li>
-    <li>Item 14</li>
-    <li>Item 15</li>
-    <li>Item 16</li>
-    <li>Item 17</li>
-    <li>Item 18</li>
-    <li>Item 19</li>
-    <li>Item 20</li>
-  </ul>
-</body>
+  <div class="container">
+    <div class="item">item-1</div>
+    <div class="item">item-2</div>
+    <div class="item">item-3</div>
+    <div class="item">item-4</div>
+    <div class="item">item-5</div>
+    <div class="item">item-6</div>
+    <div class="item">item-7</div>
+    <div class="item">item-8</div>
+    <div class="item">item-9</div>
+    <div class="item">item-10</div>
+  </div>
 
+  
+</body>
 </html>

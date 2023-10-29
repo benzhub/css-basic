@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            /* border: 1px solid black; */
+            margin: 2rem;
+            display: grid;
+            grid-template-areas:
+            "header header header header"
+            "content content content sidebar"
+            "box-1 box-2 box-3 box-4"
+            "footer footer footer footer";
+            gap: 1rem;
+        }
+        .header {
+            grid-area: header;
+            /* border: 1px solid black; */
+            text-align: center;
+            padding: 2rem;
+        }
+        .content {
+            grid-area: content;
+            padding: 1rem;
+            /* border: 1px solid black; */
+            font-size: 1.5rem;
+            font-weight: 800;
+        }
+        .sidebar {
+            grid-area: sidebar;
+            /* border: 1px solid black; */
+            padding: 1rem;
+            border: 1px solid rgb(62, 147, 245);
+            border-radius: 1rem;
+        }
+        .sidebar .item {
+            padding: 1rem;
+            list-style: none;
+            border-bottom: 1px solid rgb(62, 147, 245);
+            text-align: left;
+            cursor: pointer;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: rgb(62, 147, 245);
+        }
+        .sidebar .item:last-child {
+            border: none;
+        }
+        .sidebar .item:hover {
+            background-color: rgb(62, 147, 245);
+            color: #fff;
+            border-radius: 0.25rem;
+        }
+        .box > h2 {
+            margin: 1rem 0;
+        }
+        .box > p {
+            font-size: 1.5rem;
+            font-weight: 800;
+        }
+        .box-1 {
+            grid-area: box-1;
+        }
+        .box-2 {
+            grid-area: box-2;
+            
+        }
+        .box-3 {
+            grid-area: box-3;
+
+        }
+        .footer {
+            grid-area: footer;
+        }
+        .footer > p {   
+            text-align: center;
+            padding: 2rem;
+            font-size: 2rem;
+            font-weight: 800;
+            /* border: 1px solid black; */
+        }
+        @media(max-width: 500px) {
+            .container {
+                grid-template-areas:
+                "header"
+                "content"
+                "sidebar"
+                "box-1"
+                "box-2"
+                "box-3"
+                "box-4"
+                "footer";
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Benzhub</h1>
+        </div>
+        <section class="content">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi dolore, quam repellat fuga amet libero ratione accusamus mollitia ut, tempore aperiam praesentium ad nostrum, vel obcaecati aliquid. Dicta facilis veniam modi, dolorum mollitia cumque dolores quod suscipit aspernatur. Dicta, facere possimus! Itaque, fugiat, distinctio natus inventore tempore aperiam repellendus velit dicta quod architecto illum quo nulla odio blanditiis alias quas voluptates vel nam adipisci, nostrum vitae est. Quod dolorum tempore repudiandae voluptates magni tempora repellat pariatur, dicta placeat accusamus veniam cumque numquam cupiditate architecto nostrum, natus, maxime iure neque soluta recusandae corrupti sed suscipit eum. Asperiores sunt tempora voluptatum consectetur dolor praesentium deserunt omnis possimus nesciunt doloremque ab mollitia, quisquam voluptatibus ducimus blanditiis ad quidem provident iure architecto cupiditate exercitationem.</p>
+        </section>
+        <section class="sidebar">
+            <ul>
+                <li class="item">item1</li>
+                <li class="item">item2</li>
+                <li class="item">item3</li>
+                <li class="item">item4</li>
+                <li class="item">item5</li>
+            </ul>
+        </section>
+        <div class="box box-1">
+            <h2>Box1</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum rerum recusandae a esse non amet, voluptas ab, accusamus eum ea est repellendus illum tempora itaque ducimus sed? Recusandae, inventore quia?</p>
+        </div>
+        <div class="box box-2">
+            <h2>Box2</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum rerum recusandae a esse non amet, voluptas ab, accusamus eum ea est repellendus illum tempora itaque ducimus sed? Recusandae, inventore quia?</p>
+        </div>
+        <div class="box box-3">
+            <h2>Box3</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum rerum recusandae a esse non amet, voluptas ab, accusamus eum ea est repellendus illum tempora itaque ducimus sed? Recusandae, inventore quia?</p>
+        </div>
+        <div class="box box-4">
+            <h2>Box4</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum rerum recusandae a esse non amet, voluptas ab, accusamus eum ea est repellendus illum tempora itaque ducimus sed? Recusandae, inventore quia?</p>
+        </div>
+        <div class="footer">
+            <p>Copyright &copy; 2022</p>
+        </div>
+    </div>
+</body>
+</html>

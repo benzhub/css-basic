@@ -6,11 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Flex Basics</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
       #container{
         display: flex;
         /* default setting is row */
         /* 左對齊 */
-        flex-direction: row;
+        /* flex-direction: row; */
         /* 右對齊 */
         /* flex-direction: row-reverse; */
         /* flex-direction: column; */
@@ -22,7 +27,7 @@
         flex-flow: row wrap;
       }
       .item{
-        padding: 1rem;
+        padding: 2rem;
         text-align: center;
         background-color: #f4f4f4;
         border: #ccc solid 1px;
